@@ -13,14 +13,19 @@ export default defineNuxtConfig({
     // alias: {
     //     '@images': resolve(__dirname, './assets/images'),
     //     '@fonts': resolve(__dirname, './assets/fonts'),
+    //     '@styles': resolve(__dirname, './assets/styles'),
     // },
-    // vite:{
-    //     css: {
-    //         preprocessorOptions: {
-    //             scss: {
-    //                 additionalData: '@use "./assets/style/index.scss";'
-    //             }
-    //         }
-    //     }
-    // }
+    // css:[
+    //     '@styles/index.scss'
+    // ],
+
+    vite:{
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: '@import "@/assets/styles/index.scss";'
+                }
+            }
+        }
+    }
 })
