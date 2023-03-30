@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// import { resolve } from 'path'
+import { resolve } from 'path'
 
 export default defineNuxtConfig({
     runtimeConfig: {
@@ -10,11 +10,9 @@ export default defineNuxtConfig({
           apiBase: '/api'
         }
     },
-    // alias: {
-    //     '@images': resolve(__dirname, './assets/images'),
-    //     '@fonts': resolve(__dirname, './assets/fonts'),
-    //     '@styles': resolve(__dirname, './assets/styles'),
-    // },
+    alias: {
+        '@images': resolve(__dirname, './assets/images'),
+    },
     // css:[
     //     '@styles/index.scss'
     // ],
