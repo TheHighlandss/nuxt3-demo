@@ -7,12 +7,6 @@
 </template>
 
 <script setup>
-const runtimeConfig = useRuntimeConfig()
-// console.log(runtimeConfig);
-
-const appConfig = useAppConfig()
-// console.log('appConfig',appConfig);
-
 useHead({
   title: 'My App',
   meta: [
@@ -29,6 +23,5 @@ useHead({
 <style scoped lang="scss">
 .container{
     color: $theme;
-    // color: aqua;
 }
 </style>
