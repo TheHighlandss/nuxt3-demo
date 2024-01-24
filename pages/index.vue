@@ -7,6 +7,7 @@
     </h2>
     <div class="container">
       <p>1. 错误处理测试请访问(访问无效变量的场景) <nuxt-link to="/about">错误处理</nuxt-link></p>
+      <p>2. 降级CSR测试（query中带有csr=1,则为csr渲染,否则为ssr渲染） <nuxt-link to="/list">错误处理</nuxt-link></p>
     </div>
 
 </template>

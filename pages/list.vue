@@ -17,7 +17,16 @@
 
 <script setup lang="ts">
 onErrorCaptured((err) => {
+    const route = useRoute()
     console.log('about.vue:', err)
+    if(process.server && route.query.csr !== '1'){
+        navigateTo({
+            path: '/list',
+            query: {
+                csr: 1
+            }
+        })
+    }
     return false
 })
 const tip = ref(`
