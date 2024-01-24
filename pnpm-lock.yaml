@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@t5-utils/core':
-    specifier: ^0.5.5
-    version: 0.5.5
-
 devDependencies:
   '@types/node':
     specifier: ^18.15.11
@@ -1471,16 +1466,6 @@ packages:
     resolution: {integrity: sha512-rUV5WyJrJLoloD4NDN1V1+LDMDWOa4OTsT4yYJwQNpTU6FWxkxHpL7eu4w+DmiH8x/EAM1otkPE1+LaspIbplw==}
     engines: {node: '>=18'}
     dev: true
-
-  /@t5-utils/core@0.5.5:
-    resolution: {integrity: sha512-dL7dV0pkzyuOUPwO9fh3hMRVtVWPU6FNKzIO7yG7IatTDGq36FI6iy4qXOCYYdyKUMHPYp/Qv7E/dYFzUosTvQ==}
-    dependencies:
-      '@t5-utils/shared': 0.5.5
-    dev: false
-
-  /@t5-utils/shared@0.5.5:
-    resolution: {integrity: sha512-ttvf+je8uTY/ZPnhpjURjEUl/pQyXH9gKEj3xWXIVB4xhKTF9AMms5+QXPqdZH4u0twiByBkiobacMfA13R2QA==}
-    dev: false
 
   /@trysound/sax@0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
