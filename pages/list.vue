@@ -5,7 +5,7 @@
         <div class="content">
             <div>下方虚线框区域内容会有一个错误的访问</div>
             <div class="error-area">
-                <TestReadError/>
+                <TestFallBack/>
             </div>
         </div>
     </div>
@@ -21,8 +21,8 @@ onErrorCaptured((err) => {
     return false
 })
 const tip = ref(`
-该页面用于测试 <span style="color: blue;font-weight: bold;">单纯添加错误处理</span> 的使用  <br/>
-页面结构： about.vue --> readErr.vue --> button.vue <br/>
+该页面用于测试 <span style="color: blue;font-weight: bold;">降级csr</span> 的使用  <br/>
+页面结构： list.vue --> FallBack.vue --> button.vue <br/>
 其中 button.vue 中会有一个错误的访问 <br/>
 `)
 </script>
