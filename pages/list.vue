@@ -18,7 +18,7 @@
 <script setup lang="ts">
 onErrorCaptured((err) => {
     const route = useRoute()
-    console.log('about.vue:', err)
+    console.log('list.vue:', err)
     if(process.server && route.query.csr !== '1'){
         navigateTo({
             path: '/list',
