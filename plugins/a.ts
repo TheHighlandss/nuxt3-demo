@@ -1,25 +1,18 @@
 export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.hook('app:rendered', (event) => {
-      console.log('app:rendered');
-        // console.log('app:rendered', event, );
-        // console.log('nuxtApp',nuxtApp);
-        // nuxtApp.ssrContext.noSSR = true
-
-        // if(event.renderResult?.html === '<div id="__nuxt"></div>' && event.ssrContext){
-        //   nuxtApp.ssrContext.noSSR = true
-        //   console.log(123, nuxtApp.ssrContext?.noSSR);
-        //   // nuxtApp.ssrContext.event.context.nuxt.noSSR = true
-        //   if(nuxtApp.ssrContext){
-        //     // nuxtApp.ssrContext.noSSR = true
-        //     console.log(1);
-        //   }
-
-        //   // event.ssrContext.url += '?error=1'
-        //   // event.ssrContext.error = true
-        //   // event.renderResult.html = 'error'
-        // }
-        // if(){}
-        
+      console.log('app:rendered',event);
+      if(event.renderResult?.html === '<div id="__nuxt"></div>'){
+        const response = event.ssrContext?.event.node.res
+        const originUrl = event.ssrContext?.event.node.req.url || ''
+        let [path, query = ''] = originUrl.split('?')
+        if(!query.includes('csr=1') && response) {
+          const newQuery = query ? `${query}&csr=1` : 'csr=1'
+          const url = `${path}?${newQuery}`
+          response.statusCode = 302;
+          response.setHeader('Location', url);
+          response.end();
+        }
+      }
     })
 
     nuxtApp.hook('vue:error', (event) => {
