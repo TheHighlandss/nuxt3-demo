@@ -2,7 +2,14 @@
 
 
   export default defineNitroPlugin((nitroApp) => {
-    
+    nitroApp.hooks.hook("error",(error, event) => {
+      console.log(`Application error:`,process.server,event)
+    //   console.log(23,event.path);
+    //   navigateTo({
+    //     path: '/error',
+    //   })
+    return 123
+    });
 
     // nitroApp.hooks.hook('app:rendered', (response, {event}) => {
     //   console.log('app:rendered', response)
