@@ -29,6 +29,7 @@ onErrorCaptured((err) => {
     }
     return false
 })
+
 const tip = ref(`
 该页面用于测试 <span style="color: blue;font-weight: bold;">降级csr</span> 的使用  <br/>
 页面结构： list.vue --> FallBack.vue --> button.vue <br/>

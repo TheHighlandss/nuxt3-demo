@@ -16,6 +16,6 @@
       text-align: center;
       height: 100px;
       line-height: 100px;
-      background-color: #000;
+      background-color: rgb(248, 183, 219);
   }
   </style>

@@ -8,6 +8,7 @@
                 <TestReadError/>
             </div>
         </div>
+        {{ a.b.c }}
     </div>
     <CommonFooter/>
   <div>
@@ -16,10 +17,14 @@
 </template>
 
 <script setup lang="ts">
-onErrorCaptured((err) => {
-    console.log('about.vue:', err)
-    return false
-})
+const a = ref(1)
+// onErrorCaptured((err, target, info) => {
+//     // nuxtApp.hooks.callHook('vue:error', err)
+//     nuxtApp.hooks.callHook('vue:error', err, target, info).catch(hookError => console.error('[nuxt] Error in `vue:error` hook', hookError))
+//     console.log('about.vue:', err)
+//     return false
+// })
+// const a = b
 const tip = ref(`
 该页面用于测试 <span style="color: blue;font-weight: bold;">单纯添加错误处理</span> 的使用  <br/>
 页面结构： about.vue --> readErr.vue --> button.vue <br/>
