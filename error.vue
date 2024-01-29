@@ -9,14 +9,15 @@ const props = defineProps<{
     error: any
 }>()
 
-console.log(props.error);
+console.log('errorpage',props.error);
+console.dir(props.error);
 
-if(props.error.statusCode === 404){
-    navigateTo({
-        path: useRoute().path,
-        query: {
-            csr: 1
-        }
-    })
-}
+// if(props.error.statusCode === 404){
+//     navigateTo({
+//         path: useRoute().path,
+//         query: {
+//             csr: 1
+//         }
+//     })
+// }
 </script>

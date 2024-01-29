@@ -3,7 +3,7 @@
       index.vue
     </h1>
     <h2>
-      说明： 该项目用于Nuxt的容灾及降级测试
+      说明： 该项目用于Nuxt的容灾及降级测试{{ a.b }}
     </h2>
     <div class="container">
       <p>1. 错误处理测试请访问(访问无效变量的场景) <nuxt-link to="/about">错误处理</nuxt-link></p>
